@@ -1,0 +1,169 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours contrôle du flux d'exécution</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contrôle du flux d'exécution</h1>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <h2>1. Introduction</h2>
+                <p>
+                <div class="text-align">
+                    <div class="font-size">Jusqu’à présent, nous avons vu des algorithmes simples qui se déroulent en
+                        séquence de la première à la dernière instruction. Cependant, ces instructions en séquence ne
+                        suffisent pas à exécuter des algorithmes plus complexes où :
+                    </div>
+                </div>
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <ul>
+                    <div class="text-align">
+                    <div class="font-size">
+                        <li>
+                            Certaines séquences d’instructions ne peuvent être exécutées que sous certaines
+                            conditions : structures conditionnelles (if... else)
+                        </li>
+                    </div>
+                    </div>
+                    <div class="text-align">
+                    <div class="font-size">
+                        <li>
+                            Certaines séquences d’instructions nécessitent d’être exécutées un certain nombre de fois :
+                            structures itératives (boucle for et boucle while)
+                        </li>
+                    </div>
+                    </div>
+                </ul>
+                <p>
+                <div class="text-align">
+                    <div class="font-size">
+                        Le chemin suivi par le programme est appelé le flux d’exécution et les
+                        instructions qui le modifient sont appelées les instructions de contrôle de flux.
+                    </div>
+                </div>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <h2>2. Structures condditionnelles</h2>
+                <h3>2.1 L'instruction conditionnelle Si</h3>
+                <p>
+                    <div class="text-align">
+                    <div class="font-size">
+                        Dans certains cas, on ne veut exécuter une instruction que sous une condition.
+                    </div>
+                    </div>
+                </p>
+                <img class="image" src="img/Img1.png" alt="Image1">
+                <p>
+                <div class="font-size"><span class="gras">Syntaxe :</div></span>
+                </p>
+                <img class="image" src="img/Img2.png" alt="Image2">
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <p>
+                    <div class="text-align">
+                    <div class="font-size">
+                        Après avoir tapé <span class="color">if</span> (condition) et appuyé sur entrée,
+                        l’éditeur va alors automatiquement indenter (décalage vers la droite) les lignes d’instructions suivantes. En effet, toutes les instructions
+                        qui doivent être effectuées si la condition est vraie doivent être indentées, et elles doivent avoir
+                        impérativement la même indentation.
+                    </div>
+                    </div>
+                </p>
+                <p>
+                    <div class="text-align">
+                    <div class="font-size">
+                        Exemple : le programme suivant affiche "candidat reçu" mais uniquement que
+                        celui-ci ait une moyenne supérieure ou égale à 10 :
+                    </div>
+                    </div>
+                </p>
+                <iframe src="https://trinket.io/embed/python/3f649d1f6e" width="100%" height="356" frameborder="0" marginwidth="0"
+                marginheight="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <h3>2.2 L'évaluation de la condition</h3>
+                <p>
+                    <div class="text-align">
+                    <div class="font-size">
+                        En fait la condition évaluée m>=10 renvoie un booléen : <span class="color">True</span>
+                        (vrai) ou <span class="color">False</span> (faux). Il est
+                        possible de le vérifier en rajoutant l’instruction suivante en fin de programme :
+                    </div>
+                    </div>
+                </p>
+                <iframe src="https://trinket.io/embed/python/30a6477a5e" width="100%" height="356" frameborder="0" marginwidth="0"
+                marginheight="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <h3>2.3 Opérateurs de comparaison et opérateurs logiques</h3>
+                <p>
+                    <div class="text-align">
+                    <div class="font-size">
+                        Afin d’écrire une condition, on utilise les opérateurs de comparaison suivants :
+                    </div>
+                    </div>
+                </p>
+                <table class="demo">
+                    <thead>
+                        <tr>
+                            <th>Opérateur</th>
+                            <th>Signification littérale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;&lt;</td>
+                            <td>&nbsp;strictement inférieur à</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&gt;</td>
+                            <td>&nbsp;strictement supérieur à</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&lt;=</td>
+                            <td>&nbsp; inférieur ou égal à</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&gt;=</td>
+                            <td>&nbsp;supérieur ou égal à</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;==</td>
+                            <td>&nbsp;égal à</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;!=</td>
+                            <td>&nbsp;différent de</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <a href=https://fr.wikipedia.org/wiki/Python_(langage)>Python wikipédia</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
